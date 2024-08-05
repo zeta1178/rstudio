@@ -1,0 +1,5 @@
+install.packages("paws")
+library("paws")
+Sys.setenv(AWS_PROFILE = "mcruz")
+comprehend <- paws::comprehend()
+comprehend$detect_sentiment("Awesome!","en")
